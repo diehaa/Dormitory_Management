@@ -1,0 +1,63 @@
+@startuml Project JSP, Servlet - Dormitory Management
+skinparam ParticipantPadding 50
+skinparam BoxPadding 10
+left to right direction
+
+skinparam actor {
+    backgroundColor #FEFEC8
+    borderColor #BD0042
+    borderThickness 2
+}
+skinparam usecase {
+    backgroundColor #FEFEC8
+    borderColor #BD0042
+    RoundCorner 20
+    UserCaseVerticalAligment top
+    UserCaseHorizontalAlignment center
+    borderThickness 2
+}
+skinparam package {
+    backgroundColor #EEEBDC
+}
+
+skinparam ArrowColor BD0042
+skinparam ArrowThickness 1.0
+skinparam UsecaseBorderThickness 2
+skinparam PersonBorderThickness 2
+skinparam ArrowFontSize 10
+skinparam ActorFontSize 10
+skinparam UsecaseFontSize 10
+
+
+package Application {
+    usecase "Đăng nhập" as UC_Login
+    usecase "Đổi mật khẩu" as UC_ChangePassword
+    usecase "Thêm/sửa/xoá thông tin người dùng" as UC_CRUDInfo
+    usecase "Thêm/sửa/xoá thông tin phòng" as UC_Admin_CRUDRoom
+    usecase "Thêm/sửa/xoá booking" as UC_Admin_CRUDBooking
+    usecase "Trừ tiền hàng tháng" as UC_Admin_ReduceBalance
+    usecase "Duyệt đơn" as UC_AdminConfirmStatus
+    usecase "Đăng ký phòng" as UC_User_RegisterRoom
+    usecase "Thanh toán tiền" as UC_User_Payment
+    usecase "Gửi đơn" as UC_User_SendStatus
+
+}
+actor "Quản lý KTX" as Admin
+actor "Học sinh, sinh viên" as User
+
+User ---> UC_Login
+User ---> UC_ChangePassword
+User ---> UC_User_RegisterRoom
+User ---> UC_User_Payment
+User ---> UC_User_SendStatus
+User ---> UC_CRUDInfo
+
+UC_Login <--- Admin
+UC_ChangePassword <--- Admin
+UC_CRUDInfo <--- Admin
+UC_Admin_CRUDRoom <--- Admin
+UC_Admin_CRUDBooking <--- Admin
+UC_Admin_ReduceBalance <--- Admin
+UC_AdminConfirmStatus <--- Admin
+
+@enduml
