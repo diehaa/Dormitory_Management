@@ -15,7 +15,7 @@ import model.Users;
 
 /**
  *
- * @author phangiabao
+ * @author diemhang
  */
 public class PaymentDAO {
 
