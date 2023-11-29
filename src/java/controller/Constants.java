@@ -6,7 +6,7 @@ package controller;
 
 /**
  *
- * @author phangiabao
+ * @author diemhang
  */
 public class Constants {
     public static String GOOGLE_CLIENT_ID = "1070962791948-v31k9v3iqe31r9b9ad5m3chg7hv28i3i.apps.googleusercontent.com";
