@@ -14,7 +14,7 @@ import model.Admin;
 
 /**
  *
- * @author phangiabao
+ * @author diemhang
  */
 public class AdminDAO {
 
