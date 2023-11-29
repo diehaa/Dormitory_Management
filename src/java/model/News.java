@@ -8,7 +8,7 @@ import java.sql.Date;
 
 /**
  *
- * @author phangiabao
+ * @author diemhang
  */
 public class News {
     private int newsId;
