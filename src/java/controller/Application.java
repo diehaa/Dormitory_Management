@@ -28,7 +28,7 @@ import model.Users;
 
 /**
  *
- * @author phangiabao
+ * @author diemhang
  */
 @WebServlet(name = "Application", urlPatterns = {"/application"})
 public class Application extends HttpServlet {
