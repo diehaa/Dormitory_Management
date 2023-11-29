@@ -6,7 +6,7 @@ package model;
 
 /**
  *
- * @author phangiabao
+ * @author diemhang
  */
 public class Room {
     private int roomId;
