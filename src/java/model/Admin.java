@@ -6,7 +6,7 @@ package model;
 
 /**
  *
- * @author phangiabao
+ * @author diemhang
  */
 public class Admin {
     private int AdminId;
