@@ -25,7 +25,7 @@ import util.MaHoa;
 
 /**
  *
- * @author phangiabao
+ * @author diemhang
  */
 @WebServlet(name = "Admin", urlPatterns = {"/admin"})
 public class Admin extends HttpServlet {
