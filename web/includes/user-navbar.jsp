@@ -9,41 +9,40 @@
     <!-- Navbar Brand-->
     <a class="navbar-brand ps-3" href="#"><img height="57px" src="https://danangjob.vn/Upload/Member/2023324144757.jpg"/></a>
     <!-- Sidebar Toggle-->
-    <!--<button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>-->
-    <c:set var="c" value="${sessionScope.adminAuth}"/>
+<!--    <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>-->
+    <c:set var="c" value="${sessionScope.userAuth}"/>
     <a class="nav-link fw-bold text-light" >
         <div class="sb-nav-link-icon "><i class="fas fa-users"></i> Welcome back: ${c.name}</div>
 
     </a>
-
+   
     <!-- Navbar Search-->
     <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
         <div class="input-group">
             &nbsp;
         </div>
     </form>
-
+    
     <!-- Navbar-->
     <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="admin?action=view-profile">Profile</a></li>
-                <li><a class="dropdown-item" href="admin?action=change-password">Change Password</a></li>
+                <li><a class="dropdown-item" href="user?action=view-profile">Profile</a></li>
+                <li><a class="dropdown-item" href="user?action=change-password">Change Password</a></li>
                 <li><hr class="dropdown-divider" /></li>
                 <li><a class="dropdown-item" href="login?action=logout">Logout</a></li>
             </ul>
         </li>
     </ul>
-
 </nav>
 
 <script>
     // Configs
-    let liveChatBaseUrl = document.location.protocol + '//' + 'livechat.fpt.ai/v36/src'
+    let liveChatBaseUrl   = document.location.protocol + '//' + 'livechat.fpt.ai/v36/src'
     let LiveChatSocketUrl = 'livechat.fpt.ai:443'
-    let FptAppCode = 'b959102a7ed00f933126885937774d50'
-    let FptAppName = 'Live support'
+    let FptAppCode        = 'b959102a7ed00f933126885937774d50'
+    let FptAppName        = 'Live support'
     // Define custom styles
     let CustomStyles = {
         // header
@@ -73,7 +72,7 @@
         customerButtonText: 'Start',
         prefixEnable: false,
         prefixType: 'radio',
-        prefixOptions: ["Anh", "Chị"],
+        prefixOptions: ["Anh","Chị"],
         prefixPlaceholder: 'Danh xưng',
         // custom css
         css: ''
@@ -89,18 +88,18 @@
     let FptLiveChatConfigs = {
         appName: FptAppName,
         appCode: FptAppCode,
-        themes: '',
-        styles: CustomStyles
+        themes : '',
+        styles : CustomStyles
     }
     // Append Script
-    let FptLiveChatScript = document.createElement('script')
-    FptLiveChatScript.id = 'fpt_ai_livechat_script'
-    FptLiveChatScript.src = liveChatBaseUrl + '/static/fptai-livechat.js'
+    let FptLiveChatScript  = document.createElement('script')
+    FptLiveChatScript.id   = 'fpt_ai_livechat_script'
+    FptLiveChatScript.src  = liveChatBaseUrl + '/static/fptai-livechat.js'
     document.body.appendChild(FptLiveChatScript)
     // Append Stylesheet
-    let FptLiveChatStyles = document.createElement('link')
-    FptLiveChatStyles.id = 'fpt_ai_livechat_script'
-    FptLiveChatStyles.rel = 'stylesheet'
+    let FptLiveChatStyles  = document.createElement('link')
+    FptLiveChatStyles.id   = 'fpt_ai_livechat_script'
+    FptLiveChatStyles.rel  = 'stylesheet'
     FptLiveChatStyles.href = liveChatBaseUrl + '/static/fptai-livechat.css'
     document.body.appendChild(FptLiveChatStyles)
     // Init
