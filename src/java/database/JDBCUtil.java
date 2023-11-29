@@ -11,7 +11,7 @@ import java.sql.SQLException;
 
 /**
  *
- * @author phangiabao
+ * @author diemhang
  */
 public class JDBCUtil {
     /*USE BELOW METHOD FOR YOUR DATABASE CONNECTION FOR BOTH SINGLE AND MULTILPE SQL SERVER INSTANCE(s)*/
